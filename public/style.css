@@ -1,0 +1,157 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: #e9e9e9;
+	font-family: 'EB Garamond';
+}
+
+h2, a, h5{
+	padding-left: 10px;
+}
+h5{
+	color: #949494;
+}
+p{
+	padding: 10px;
+	text-align: justify;
+}
+a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #00CED1;
+}
+i{
+	float: right;
+	padding-right: 10px;
+	cursor: pointer;
+	color: #000;
+}
+img{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+}
+
+.img1{
+	background-image: url("../src/img1.jpg");
+}
+.img2{
+	background-image: url("../src/img2.jpg");
+}
+.img3{
+	background-image: url("../src/img3.jpg");
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.card{
+	background: white;
+	width: 270px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.card:hover {
+	background-color: #808080;
+	color: white;
+	cursor: pointer;
+	transform: scale(1.03);
+	transition: all 1s ease;
+}
+.card-image{
+	height: 150px;
+	margin-bottom: 15px;
+	background-size: cover;
+	border-radius: 5px 5px 0 0;
+}
+
+.fa-chevron-up{
+	margin-top: -8%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 800ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+}
+.popup .close {
+  position: absolute;
+  right: 30px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #333;
+}
+
+.username{
+	font-weight: bold;
+	color: #000;
+	font-size: 20px;
+	margin-top: -18px;
+}
+.user{
+	display: flex;
+	padding: 20px;
+}
+.profil-img{
+	width: 80px;
+	background: none;
+}
+.location{
+	padding-top: 20px;
+	margin-left: -102px;
+	color: #949494;
+}
+
+.fulltextcss p,
+.lesscss {
+	display: none;
+}
+.fulltextcss:target p,
+.fulltextcss:target .lesscss {
+	display: block;
+}
+.fulltextcss:target .morecss {
+	display: none;
+}
+
+@media only screen and (max-width: 766px) {
+  .popup {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 552px) {
+  .popup {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 303px) {
+  .popup .close {
+    right: 10px;
+  }
+}
